@@ -1,5 +1,6 @@
 <?php
 // サーバのベースURL
+// aaa
 $url_base = "http://tojikaji.xsrv.jp/";
 // ディレクトリのパスからURLを取得する処理（取得したい文字が検索文字より後にある場合）
 $directory_path = dirname(__FILE__);

@@ -1,15 +1,14 @@
 <?php
 // サーバのベースURL
-// テスト用文字列（後ほど削除）
 $url_base = "http://tojikaji.xsrv.jp/";
 // ディレクトリのパスからURLを取得する処理（取得したい文字が検索文字より後にある場合）
 $directory_path = dirname(__FILE__);
 $search_string = "public_html/";
-$posision = strpos($directory_path, $search_string) + strlen($search_string);
-$path_this = substr($directory_path, $posision) . "/";
+$posision = strpos($directory_path, $search_string) + strlen($search_string); // http://~public_html/の長さ
+$path_this = substr($directory_path, $posision) . "/"; // ~public_html/以降のパスの文字列。最後はスラッシュを結合。 test_all/muramatsu/
 // ディレクトリのパスから一つ上階層を取得する処理
-$directory_list = explode("/", $path_this);
-$directory_list_quantity = count($directory_list);
+$directory_list = explode("/", $path_this); // スラッシュでパス文字列を分割したリストを作成 [test_all,muramatsu]
+$directory_list_quantity = count($directory_list); // 上記のリストの要素数 2
 $minimum_quantity = 2;
 if ($directory_list_quantity > $minimum_quantity) {
     // $path_this を "/" で分割した配列の数が $minimum_quantity より大きいとき
@@ -21,14 +20,14 @@ if ($directory_list_quantity > $minimum_quantity) {
         }
     }
 } else {
-    // $path_this 内で、始めに現れる "/" の前の文字列を取得する
+    // $path_this 内で、始めに現れる "/" の前の文字列を取得する　test_all
     $search_string_parent_path = "/";
     $posision = strpos($path_this, $search_string_parent_path) + strlen($search_string_parent_path) - 1;
     $path_up_directory = substr($path_this, 0, $posision);
 }
 // ディレクトリのパスからファイル名を取得する処理
-$posision = strpos(__FILE__, $path_this) + strlen($path_this);
-$file_name = substr(__FILE__, $posision);
+$posision = strpos(__FILE__, $path_this) + strlen($path_this); // 親ディレクトリまでの文字列の長さ
+$file_name = substr(__FILE__, $posision); // ファイル名
 
 // URL
 $url_this = $url_base . $path_this;

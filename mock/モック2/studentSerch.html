@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <title>生徒検索</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class=body>
+  <h2 class="center" style="margin-top: 10px; margin-bottom: 10px;">生徒検索</h2>
+  <table class=table>
+    <tr>
+      <th class=table>学年</th><th class=table>クラス</th><th class=table>性別</th><th class=table>氏名</th>
+    </tr>
+    <tr>
+      <td class=table>
+        <select id="grade"/>
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select> 年
+      </td>
+      <td class=table style="text-align: left;">
+        <select id="grade"/>
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="1">4</option>
+          <option value="2">5</option>
+          <option value="3">6</option>
+          <option value="1">7</option>
+          <option value="2">8</option>
+          <option value="3">9</option>
+          <option value="1">10</option>
+          <option value="2">11</option>
+          <option value="3">12</option>
+        </select> 組
+      </td>
+      <td class=table>
+        <select id="gender"/>
+          <option value="0"></option>
+          <option value="1">男子</option>
+          <option value="2">女子</option>
+        </select>
+      </td>
+      <td class=table>
+        <input type="text" id="studentName" placeholder="山田 太郎" />
+      </td>
+    </tr>
+  </table>
+    <div style="margin-left: 40%; margin-top: 10px;">
+      <a href="studentList.html" target="frame3_2">検索</a>
+    </div>
+</body>
+</html>

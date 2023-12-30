@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <title>生徒登録</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class=body>
+  <h2 class="center" style="margin-top: 10px; margin-bottom: 10px;">生徒登録</h2>
+  <table class=table>
+    <tr>
+      <th class=table>学籍番号</th>
+      <td style="text-align: left;"><input type="text" id="studentNo" required minlength="8" maxlength="12" size="12" /></td>
+    </tr>
+    <tr>
+      <th class=table>名前</th>
+      <td style="text-align: left;"><input type="text" id="studentName" required size="12" /></td>
+    </tr>
+    <tr>
+      <th class=table>学年</th>
+      <td class=table style="text-align: left;">
+        <select id="grade"/>
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select> 年
+      </td>
+    </tr>
+    <tr>
+      <th class=table>クラス</th>
+      <td class=table style="text-align: left;">
+        <select id="grade"/>
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="1">4</option>
+          <option value="2">5</option>
+          <option value="3">6</option>
+          <option value="1">7</option>
+          <option value="2">8</option>
+          <option value="3">9</option>
+          <option value="1">10</option>
+          <option value="2">11</option>
+          <option value="3">12</option>
+        </select> 組
+      </td>
+    </tr>
+    <tr>
+      <th class=table>性別</th>
+      <td class=table style="text-align: left;">
+        <select id="gender"/>
+          <option value="0"></option>
+          <option value="1">男子</option>
+          <option value="2">女子</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th class=table>入学年度</th>
+      <td class=table style="text-align: left;">
+        <input type="text" id="started" required size="4" value="2024"/>年度
+      </td>
+    </tr>
+  </table>
+  <div style="margin-left: 45%; margin-top: 10px;",>
+    <a href="studentRegistrationConfirmation.html">登録</a>
+    <a href="studentRegistrationComplete.html" style="margin-left: 5%;">一括登録CSVアップデート</a>
+  </div>
+</body>
+</html>

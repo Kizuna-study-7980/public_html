@@ -40,11 +40,14 @@ $url_up_directory = $url_base . $path_up_directory;
 // $url_xxx = $url_this . "下階層フォルダ名" . "/";
 $url_hiruta_mock = $url_this . "試作" . "/" . "login.html";
 
+$url_hiruta_mock2 = $url_this . "モック2" . "/" . "login.html";
+
 // URLリスト表示用二次元配列
 $url_list_no_url = 0;
 $url_list_no_name = 1;
 $url_list = [
     [$url_hiruta_mock, "モック（蛭田）"] ,
+    [$url_hiruta_mock2, "モック2（蛭田）"] ,
     [$url_base, "戻る"]
 ];
 ?>

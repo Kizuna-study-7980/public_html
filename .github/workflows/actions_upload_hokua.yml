@@ -1,0 +1,21 @@
+name: Upload_hokua
+
+# 個人環境用のアップロードアクション
+on:
+  push:
+    branches: [develop_hokua]
+jobs:
+  FTP-Upload-Action:
+    name: FTP-Upload-Action
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name: FTP-Deploy-Action
+          uses: SamKirkland/FTP-Deploy-Action@4.2.0
+          with:
+            server: ${{ secrets.SERVER }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            local-dir: ./test_all/hokua/
+            server-dir: /tojikaji.xsrv.jp/public_html/test_all/hokua/

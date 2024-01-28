@@ -1,5 +1,5 @@
 import sys
-import Util
+import util.Util as Util
 
 argvs = sys.argv
 program_name = argvs[0]
